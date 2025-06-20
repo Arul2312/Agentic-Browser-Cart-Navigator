@@ -75,7 +75,3 @@ agent_mode: "browser_use"    # "browser_use" or "manual"
 price_threshold: 100.0       # Spending limit in USD
 llm_provider: "openai"       # AI provider
 ```
-
-## License
-
-MIT License
