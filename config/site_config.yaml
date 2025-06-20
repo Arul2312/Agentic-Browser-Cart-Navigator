@@ -1,0 +1,63 @@
+# Site configuration for browser automation
+
+# ============================================
+# MAIN SETTINGS - Change these for different modes
+# ============================================
+
+# Agent Mode - Choose your automation type
+agent_mode: "browser_use"  # Options: "browser_use" or "manual"
+
+# LLM Provider - Choose your AI model  
+llm_provider: "openai"     # Options: "openai" or "gemini-1.5-flash"
+
+# Price Threshold - Cart value comparison
+price_threshold: 100.0
+
+# ============================================
+# BROWSER SETTINGS
+# ============================================
+browser:
+  headless: false
+  viewport_width: 1280
+  viewport_height: 720
+  timeout: 30000
+
+# ============================================
+# AMAZON SETTINGS
+# ============================================
+amazon:
+  base_url: "https://amazon.com"
+
+# ============================================
+# TASK SETTINGS
+# ============================================
+task:
+  default_threshold: 100.0
+  currency: "USD"
+
+# ============================================
+# OPENAI SETTINGS (when using OpenAI)
+# ============================================
+openai:
+  model: "gpt-4o-mini"
+  temperature: 0.1
+  max_tokens: 500
+  api_key_env: "OPENAI_API_KEY"
+
+# ============================================
+# BROWSER USE AUTOMATION SETTINGS
+# ============================================
+browser_use:
+  max_actions: 20
+  max_steps: 15
+  safety_mode: true
+  enable_memory: false
+
+# ============================================
+# MANUAL MODE SETTINGS
+# ============================================
+manual:
+  show_instructions: true
+  step_by_step: true
+  require_confirmation: true
+  display_progress: true
